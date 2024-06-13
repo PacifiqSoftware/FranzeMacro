@@ -13,25 +13,25 @@ set cl=%cd%
 powershell.exe Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/PacifiqSoftware/FranzeMacro/main/macro11.py' -Outfile 'macro11.py'
 powershell.exe Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/PacifiqSoftware/FranzeMacro/main/franze_icon.ico' -Outfile 'franze_icon.ico'
 echo Set oWS = WScript.CreateObject("WScript.Shell") > CreateShortcut.vbs
-echo sLinkFile = "%userprofile%\Desktop\FranzeMacro V1.1.lnk" >> CreateShortcut.vbs
+echo sLinkFile = "%userprofile%\OneDrive\Bureaublad\FranzeMacro V1.1.lnk" >> CreateShortcut.vbs
 echo Set oLink = oWS.CreateShortcut(sLinkFile) >> CreateShortcut.vbs
-echo oLink.TargetPath = "%userprofile%\Desktop\macro11.py" >> CreateShortcut.vbs
+echo oLink.TargetPath = "%userprofile%\OneDrive\Bureaublad\macro11.py" >> CreateShortcut.vbs
 echo oLink.WorkingDirectory = "%cl%" >> CreateShortcut.vbs
 echo oLink.Description = "FranzeMacro for Roblox" >> CreateShortcut.vbs
-echo oLink.IconLocation = "%userprofile%\Desktop\franze_icon.ico" >> CreateShortcut.vbs
+echo oLink.IconLocation = "%userprofile%\OneDrive\Bureaublad\franze_icon.ico" >> CreateShortcut.vbs
 echo oLink.Save >> CreateShortcut.vbs
 cscript CreateShortcut.vbs
 del CreateShortcut.vbs
 cls
 echo FranzeMacro 1.1 is being installed, do not close this program!
 echo Cleaning up...
-copy "macro11.py" "%userprofile%\Desktop"
-copy "franze_icon.ico" "%userprofile%\Desktop"
-attrib +h %userprofile%\Desktop\macro11.py
-attrib +h %userprofile%\Desktop\franze_icon.ico
+copy "macro11.py" "%userprofile%\OneDrive\Bureaublad"
+copy "franze_icon.ico" "%userprofile%\OneDrive\Bureaublad"
+attrib +h %userprofile%\OneDrive\Bureaublad\macro11.py
+attrib +h %userprofile%\OneDrive\Bureaublad\franze_icon.ico
 del macro11.py /Q
 del franze_icon.ico /Q
-cd %userprofile%\Desktop
+cd %userprofile%\OneDrive\Bureaublad
 attrib +h FranzeMacro
 rmdir FranzeMacro /Q
 echo Installation is finished!
